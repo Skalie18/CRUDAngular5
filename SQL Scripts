@@ -1,0 +1,38 @@
+USE [master]
+GO
+DROP DATABASE [Employees]
+GO
+
+CREATE DATABASE [Employees]
+
+USE [Employees]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Employees](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[EmpFirstName] [nvarchar](50) NOT NULL,
+	[EmpLastName] [nvarchar](50) NOT NULL,
+	[EmpCode] [varchar](10) NOT NULL,
+	[EmpDivision] [varchar](5) NOT NULL,
+	[EmpDepartment] [varchar](10) NOT NULL,
+ CONSTRAINT [PK_Employees] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+　
